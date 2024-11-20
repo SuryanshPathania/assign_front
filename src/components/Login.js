@@ -29,7 +29,7 @@ const Login = () => {
       };
       const body = JSON.stringify(user);
       const res = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://assign-back.vercel.app/api/users/login",
         body,
         config
       );

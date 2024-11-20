@@ -27,7 +27,7 @@ const SignUp = () => {
       };
       const body = JSON.stringify(newUser);
       const res = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "https://assign-back.vercel.app/api/users/register",
         body,
         config
       );

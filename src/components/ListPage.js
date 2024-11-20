@@ -11,7 +11,7 @@ const ListPage = () => {
     const fetchLists = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/lists/getList",
+          "https://assign-back.vercel.app/api/lists/getList",
           {
             headers: { "x-auth-token": token }, // Pass token here
           }
@@ -32,7 +32,7 @@ const ListPage = () => {
   const handleDeleteList = async (listId) => {
     try {
       console.log(`Deleting list with id: ${listId}`);
-      await axios.delete(`http://localhost:5000/api/lists/${listId}`, {
+      await axios.delete(`https://assign-back.vercel.app/api/lists/${listId}`, {
         headers: { "x-auth-token": token },
       });
       console.log("List deleted successfully");
@@ -51,7 +51,7 @@ const ListPage = () => {
         `Deleting item with code: ${code} from list with id: ${listId}`
       );
       await axios.put(
-        `http://localhost:5000/api/lists/${listId}/deleteItem`,
+        `https://assign-back.vercel.app/api/lists/${listId}/deleteItem`,
         { code },
         {
           headers: { "x-auth-token": token },

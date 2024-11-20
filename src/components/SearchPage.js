@@ -71,7 +71,7 @@ const SearchPage = ({ savedList, setSavedList }) => {
     const fetchSavedList = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/lists/getList",
+          "https://assign-back.vercel.app/api/lists/getList",
           {
             headers: { "x-auth-token": token },
           }
@@ -115,7 +115,7 @@ const SearchPage = ({ savedList, setSavedList }) => {
     // Create or update list on server
     try {
       await axios.post(
-        "http://localhost:5000/api/lists/saveList",
+        "https://assign-back.vercel.app/api/lists/saveList",
         { name, codes: tempList },
         { headers: { "x-auth-token": token } }
       );
